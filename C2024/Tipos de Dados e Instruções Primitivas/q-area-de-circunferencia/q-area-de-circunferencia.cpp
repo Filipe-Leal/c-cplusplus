@@ -18,7 +18,7 @@ int main(){
 
   //SAIDA DE DADOS
   std::cout << "" << std::endl;
-  std::cout << "Circunferência.........: " << circunferencia;
+  std::cout << "Circunferência...........: " << circunferencia;
 
   return 0;
 }
