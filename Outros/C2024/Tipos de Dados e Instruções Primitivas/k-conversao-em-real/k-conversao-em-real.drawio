@@ -1,0 +1,43 @@
+<mxfile host="Electron" modified="2024-05-05T15:18:24.023Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/24.2.5 Chrome/120.0.6099.109 Electron/28.1.0 Safari/537.36" etag="lAY5H1UzlGQvysLM-MW1" version="24.2.5" type="device">
+  <diagram name="Página-1" id="1R5FrwNlaNJvz8Y3vxet">
+    <mxGraphModel dx="472" dy="827" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="vRSCFFgQlCpBuCeZi6ZR-5" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="vRSCFFgQlCpBuCeZi6ZR-1" target="vRSCFFgQlCpBuCeZi6ZR-3">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="vRSCFFgQlCpBuCeZi6ZR-1" value="Inicio" style="strokeWidth=2;html=1;shape=mxgraph.flowchart.terminator;whiteSpace=wrap;" vertex="1" parent="1">
+          <mxGeometry x="190" y="100" width="100" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="vRSCFFgQlCpBuCeZi6ZR-7" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="vRSCFFgQlCpBuCeZi6ZR-3" target="vRSCFFgQlCpBuCeZi6ZR-6">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="vRSCFFgQlCpBuCeZi6ZR-3" value="cotacaoDolar" style="html=1;strokeWidth=2;shape=manualInput;whiteSpace=wrap;rounded=1;size=26;arcSize=11;" vertex="1" parent="1">
+          <mxGeometry x="190" y="200" width="100" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="vRSCFFgQlCpBuCeZi6ZR-9" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="vRSCFFgQlCpBuCeZi6ZR-6" target="vRSCFFgQlCpBuCeZi6ZR-8">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="vRSCFFgQlCpBuCeZi6ZR-6" value="quantidadeDolar" style="html=1;strokeWidth=2;shape=manualInput;whiteSpace=wrap;rounded=1;size=26;arcSize=11;" vertex="1" parent="1">
+          <mxGeometry x="190" y="310" width="100" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="vRSCFFgQlCpBuCeZi6ZR-11" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="vRSCFFgQlCpBuCeZi6ZR-8" target="vRSCFFgQlCpBuCeZi6ZR-10">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="vRSCFFgQlCpBuCeZi6ZR-8" value="valorReais = cotacaoDolar*quantidadeDolar" style="rounded=1;whiteSpace=wrap;html=1;absoluteArcSize=1;arcSize=14;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry x="155" y="410" width="170" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="vRSCFFgQlCpBuCeZi6ZR-14" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="vRSCFFgQlCpBuCeZi6ZR-10" target="vRSCFFgQlCpBuCeZi6ZR-12">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="vRSCFFgQlCpBuCeZi6ZR-10" value="valorReais" style="strokeWidth=2;html=1;shape=mxgraph.flowchart.display;whiteSpace=wrap;" vertex="1" parent="1">
+          <mxGeometry x="190" y="525" width="100" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="vRSCFFgQlCpBuCeZi6ZR-12" value="Fim" style="strokeWidth=2;html=1;shape=mxgraph.flowchart.terminator;whiteSpace=wrap;" vertex="1" parent="1">
+          <mxGeometry x="190" y="650" width="100" height="60" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
