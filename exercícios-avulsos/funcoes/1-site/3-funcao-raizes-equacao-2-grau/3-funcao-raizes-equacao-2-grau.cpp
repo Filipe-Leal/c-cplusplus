@@ -4,7 +4,7 @@
 
 void equacaoSegundoGrau(float a_func, float b_func, float c_func){
   //VARIAVEIS FUNCAO
-  float delta_func=0, x_func=0, raiz_func=0;
+  float delta_func=0, raiz_func=0;
 
   delta_func = (pow(b_func, 2)) - (4*a_func*c_func);
 
@@ -12,9 +12,9 @@ void equacaoSegundoGrau(float a_func, float b_func, float c_func){
   if(delta_func >= 0 || delta_func == 0){
     raiz_func = -1*(b_func+sqrt(delta_func)) / (2*a_func);
 
-    printf("%f \n", delta_func);
-    printf("%f \n", raiz_func);
-    printf("%f", -1*raiz_func);
+    printf("Valor de Delta: %f \n", delta_func);
+    printf("Raiz Negativa: %f \n", raiz_func);
+    printf("Raiz Positiva: %f", -1*raiz_func);
 
   }else{
     //DELTA < 0
@@ -35,6 +35,8 @@ int main (){
   scanf("%f", &b);
   printf("Digite o valor de C...: " );
   scanf("%f", &c);
+
+  printf("\n");
 
   equacaoSegundoGrau(a, b, c);
 
