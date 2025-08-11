@@ -2,6 +2,7 @@
 #include <stdlib.h>
 #include <math.h>
 
+//INICIO FUNCAO
 void equacaoSegundoGrau(float a_func, float b_func, float c_func){
   //VARIAVEIS FUNCAO
   float delta_func=0, raiz_func=0;
@@ -21,7 +22,7 @@ void equacaoSegundoGrau(float a_func, float b_func, float c_func){
     printf("DELTA < 0 - DELTA MENOR QUE 0");
   }
 
-}
+} //FIM FUNCAO
 
 int main (){
 
@@ -40,7 +41,15 @@ int main (){
 
   equacaoSegundoGrau(a, b, c);
 
-
-
   return 0;
 }
+
+/*3. Usando as 3 funções acima, crie um aplicativo que 
+calcula as raízes de uma equação do 2o grau:
+ax² + bx + c=0
+Para ela existir, o coeficiente 'a' deve ser diferente de 
+zero.
+Caso o delta seja maior ou igual a zero, as raízes serão
+ reais. Caso o delta seja negativo, as reais serão 
+ complexas e da forma: x + iy
+*/
