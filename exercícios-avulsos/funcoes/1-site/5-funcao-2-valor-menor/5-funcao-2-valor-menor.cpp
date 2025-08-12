@@ -4,8 +4,8 @@
 #include<Windows.h>
 
 //FUNCAO
-void maior(float numeroUm_func, float numeroDois_func){
-  if(numeroUm_func > numeroDois_func){
+void menor(float numeroUm_func, float numeroDois_func){
+  if(numeroUm_func < numeroDois_func){
     printf("%f", numeroUm_func);
   } else{
     printf("%f", numeroDois_func);
@@ -31,7 +31,7 @@ int main(){
 
   printf("\n");
 
-  maior(numeroUm, numeroDois); //FUNCAO
+  menor(numeroUm, numeroDois); //FUNCAO
   printf("\n");
 
 }
@@ -41,5 +41,5 @@ int main(){
 
 
 
-/* 4. Crie uma função em linguagem C que receba 2 números
- e retorne o maior valor.*/
+/* 5. Crie uma função em linguagem C que receba 2 números
+ e retorne o menor valor*/
