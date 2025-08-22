@@ -1,0 +1,2 @@
+Buscar valor no bd
+SELECT * FROM tb_semaforo;

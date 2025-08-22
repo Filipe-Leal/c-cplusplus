@@ -1,0 +1,8 @@
+Insere dados na entidade/tabela carro
+INSERT INTO carro
+(id_carro, modelo, ano)
+VALUES
+(1, 'Civic', 2017),
+(2, 'Opala', 1985),
+(3, 'Mercedes', 2020);
+
