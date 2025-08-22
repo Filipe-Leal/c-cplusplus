@@ -1,0 +1,10 @@
+Chave primária
+
+Criar Entidade/Tabela Pessoa
+CREATE TABLE pessoa (
+	id_pessoa INT(11) PRIMARY KEY,
+	nome VARCHAR(255)
+);
+
+Consulta entidade/tabela
+DESCRIBE pessoa;
