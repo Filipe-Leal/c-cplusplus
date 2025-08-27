@@ -39,3 +39,27 @@ O scanf aprimorado limita a quantidade de string e ler após o espaço.
     ``puts(<string>);``
 
   - fflush(stdin): chamar sempre depois de uma entrada. -> Depois de uma leitura de dados ao digitar valores vou ocorrer lixo na memória que pode atrapalhar a leitura seguinte.
+
+  --
+
+
+# Funções para Strings
+
+``#include <string.h>`` -> Não esqueça de declarar.
+
+Para alterar um valor de String via código se usa 
+``strcpy(<destino>, origem);``
+NÃO SE USA "=", se usa strcpy.
+
+
+- ``strcat(<destino>, <origem>);`` -> Junta duas String, exemplo, uma string de nome e de sobrenome;
+
+- ``strlen(<string>);`` -> Mostra o tamanho da String;
+
+- ``strcmp(<STRING1>, <STRING2>);`` -> Compara se a String 1 é estritamente igual a String 2.
+  - Se for igual retorna o valor 0;
+  - Se for diferente produz um valor diferente de 0.
+
+- Biblitoeca locale.h
+  - ``setlocale(LC_ALL, "Portuguese");`` -> Permite usar acentos.
+
