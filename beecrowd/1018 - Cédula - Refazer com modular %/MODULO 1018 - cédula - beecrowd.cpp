@@ -23,15 +23,16 @@ notaCem = valorOriginal/100;
 valorOriginal %=100; //valorOriginal = valorOriginal%100;
 
 /*
+//AQUI DESCOBRE QUANTOS 100 EXISTEM EM 545
 Exemplo
 notaCem = valorOrginial/100;
 5 = 545/100;
 
 545/100 = 5
 
-
-valorOriginal %=100;...| valorOriginal = valorOriginal % 100;
-45 %=100;..............|45 = 545 % 100;
+//AQUI DESCOBRE O RESTO QUE OS 100 DEIXOU EM 545
+valorOriginal %=100;... == valorOriginal = valorOriginal % 100;
+45 %=100;.............. == 45 = 545 % 100;
 
 */
 
@@ -66,7 +67,7 @@ notaUm = valorOriginal/1;
 valorOriginal %=1; //valorOriginal = valorOriginal%1;
 
 
- //PROCESSAMENTO E SAÍDA DADOS
+ //PROCESSAMENTO E SAï¿½DA DADOS
  std::cout<<notaCem<<" nota(s) de R$ 100,00"<<std::endl; //100
  std::cout<<notaCinquenta<<" nota(s) de R$ 50,00"<<std::endl; //50
  std::cout<<notaVint<<" nota(s) de R$ 20,00"<<std::endl; //20
