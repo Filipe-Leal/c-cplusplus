@@ -1,108 +1,54 @@
+#include<iostream>
+#include<stdlib.h>
+#include<stdio.h>
+#include<math.h>
+#include<iomanip>
 
-/*
-REFAZER COM ARRAY, ESTÁ MUITO GRANDE
-*/
 
-
-#include <iostream>
-#include <locale.h>
-#include <math.h>
-#include <iomanip>
-#include <cmath>
-
+#define tmnh 12
 
 int main(){
-  float value=0;
-  int billCem=0, billCinqueta=0,
-      billVinte=0, billDez=0,
-      billCinco=0, billDois=0,
-      billUm=0;
+  //VARIAVEIS
+  float billCoin[tmnh] = {100, 50, 20, 10, 5, 2, 1, 0.50, 0.25, 0.10, 0.05, 0.01};
+  int resultBillCoin[tmnh];
 
-  float coinCinquentaCent=0.00f, coinVintCincCent=0.00f,
-      coinDezCent=0.00f, coinCincoCent=0.00f, coinUmCent=0.00f;
+  float value[tmnh];
+  float valueReal=0.00;
+  int i;
+  fflush(stdin);
 
+  //ENTRADA DE DADOS
   std::cout << "Digite o valor...: ";
-  std::cin >> value;
+  std::cin >> valueReal;
   fflush(stdin);
 
   std::cout << std::setprecision(2) << std::fixed;
 
-  /*
-  billCem = value/100;
-  [ ] = 545/100; Quantos 100 tem 545?
-  [5] = 545/100; 5
-
-  value = fmod(value, 100);
-  [545] = 545%100; Quanto 100 deixa em 545?
-  [45] = 545%100; 45
-  */
-
-  billCem = value/100;
-  value = fmod(value, 100);
-
-  billCinqueta = value/50;
-  value = fmod(value, 50);
-
-  billVinte = value/20;
-  value = fmod(value, 20);
-
-  billDez = value/10;
-  value = fmod(value, 10);
-
-  billCinco = value/5;
-  value = fmod(value, 5);
-
-  billDois = value/2;
-  value = fmod(value, 2);
-
-  billUm = value/1;
-  value = fmod(value, 1);
-
-  coinCinquentaCent = value/0.50;
-  if(value >= 0.50){
-    value = fmod(value, 0.50);
+  for(i=0 ; i<=(tmnh-1); i++){
+      resultBillCoin[i] = valueReal/billCoin[i];
+      value[i] = fmod(valueReal, billCoin[i]);
+      valueReal = value[i];
   }
 
+/*
+      std::cout << "SAIDAS" << std::endl;
+      std::cout << "resultBillCoin[i] " << resultBillCoin[i] << std::endl;
+      std::cout << "valueReal " << valueReal << std::endl;
+      std::cout << "billCoin[i] " << billCoin[i] << std::endl;
+      std::cout << "value[i] " << value[i] << std::endl;
+      std::cout << "valueReal " << resultBillCoin[i] << std::endl;
+      std::cout << "value[i] " << value[i] << std::endl;
 
-  coinVintCincCent = value/0.25;
-  if(value >= 0.25){
-    value = fmod(value, 0.25);
+      std::cout << " " << std::endl;
+      std::cout << " " << std::endl;
+*/
+
+
+  //SAIDA DE DADOS
+  std::cout << billCoin[i] << "NOTAS: " << std::endl;
+  for(i=0; i<=(tmnh-1) ; i++){
+    std::cout << resultBillCoin[i] << " nota (s)  de R$ " << billCoin[i] << std::endl;
   }
-
-  coinDezCent = value/0.10;
-  value = fmod(value, 0.10);
-  if(value >= 0.10){
-    value = fmod(value, 0.10);
-  }
-
-
-  coinCincoCent = value/0.05;
-  value = fmod(value, 0.05);
-  if(value >= 0.5){
-    value = fmod(value, 0.5);
-  }
-
-
-  coinUmCent = value/0.01;
-  if(value >= 0.01){
-    value = fmod(value, 0.01);
-  }
-
-
-  std::cout << billCem << " Valor: " << value << " nota (s)  de R$ 100,00 " << std::endl;
-  std::cout << billCinqueta << " Valor: " << value << " nota (s)  de R$ 50,00 " << std::endl;
-  std::cout << billVinte << " Valor: " << value << " nota (s)  de R$ 20,00 " << std::endl;
-  std::cout << billDez << " Valor: " << value << " nota (s)  de R$ 10,00 " << std::endl;
-  std::cout << billCinco << " Valor: " << value << " nota (s)  de R$ 05,00 " << std::endl;
-  std::cout << billDois << " Valor: " << value << " nota (s)  de R$ 02,00 " << std::endl;
-  std::cout << billUm << " Valor: " << value << " nota (s)  de R$ 01,00 " << std::endl;
-
-  std::cout << "MOEDAS:" << std::endl;
-  std::cout << std::round(coinCinquentaCent) << " Valor: " << value << " moeda (s)  de R$ 00,50 " << std::endl;
-  std::cout << std::round(coinVintCincCent) << " Valor: " << value << " moeda (s)  de R$ 00,25 " << std::endl;
-  std::cout << std::round(coinDezCent) << " Valor: " << value << " moeda (s)  de R$ 00,10 " << std::endl;
-  std::cout << std::round(coinCincoCent) << " Valor: " << value << " moeda (s)  de R$ 00,05 " << std::endl;
-  std::cout << std::round(coinUmCent) << " Valor: " << value << " moeda (s)  de R$ 00,01 " << std::endl;
 
 
 
