@@ -1,61 +1,3 @@
-<<<<<<< HEAD
-#include <stdio.h>
-
-void remover_espacos(char valores_func[]){
-  int i, j=0;
-
-  //percorre a string original
-  for (i=0 ; valores_func[i] != '\0' ; i++){ // para o incrementador igual a zero, sendo valores diferente de NADA(/0) , incremente e faça
-
-    //se o caracatere não for um espaço, copiamos para a nova posição
-    //se o valor[nesta posicao] for diferente de espaço
-      //valores[na posição j] recebe valores[da posicao i]
-    if(valores_func[i] != ' '){
-      valores_func[j++] = valores_func[i];
-    }
-
-  }
-  //finaliza string sem espaços
-  valores_func[j] = '\0';
-
-}
-
-int main(){
-
-  char valores[12];
-  
-  printf("Digite os valores, abaixo: \n");
-  fgets(valores, 12, stdin);
-  fflush(stdin);
-
-  remover_espacos(valores);
-
-  printf("\n");
-
-  puts(valores);
-
-  return 0;
-}
-
-
-
-/*  //CONVERTENDO CHAR PARA DOUBLE/FLOAT
-  char teste = '7';
-  int convertido = (int)teste - 48;
-  int soma=0;
-
-  soma = convertido+1;
-
-  printf("%d \n", soma);
-  printf("%d", convertido);*/
-=======
-/*
-em for(i=0; i<(tam-1) ; i++), se retira 1 de tamanho, porque o algoritmo entende
-de 0 a 11 (onde tem 12 espaços) e não de 1 a 12.
-*/
-
-
-
 #include <stdio.h>
 #include <stdlib.h>
 
@@ -83,13 +25,14 @@ void remover_espacos(char valores_func[]){
 
 
 bool simbolos(char simbolos_func[]){ //FUNCAO QUE IDENTIFICA SÍMBOLOS MATEMÁTICOS
-  int i=0;
+  int i=0, resultado=0;
 
   for(i=0; i<(tam-1) ; i++){
     switch (simbolos_func[i]){
       case '+':
        // printf("SOMA \n");
-        return true;
+  
+        return resultado;
       break;
 
       case '-':
@@ -141,14 +84,17 @@ void eNumero(char* numeros_func, bool simbolo_func_enumero){
 int main(){
 
   char valores[tam];  
+  int resultado=0;
   
   printf("Digite os valores, abaixo: \n");
   fgets(valores, tam, stdin);
   fflush(stdin);
 
   remover_espacos(valores);
-  eNumero(valores, simbolos(valores));
+  
+  resultado = simbolos(valores);
 
+  printf("%d", resultado);
 
   printf("\n");
 
@@ -191,4 +137,3 @@ int main(){
     Etapa 9 -> Revisão
 
   */
->>>>>>> b01f12f8218301bc1fe0df768944f48cc99d8143
