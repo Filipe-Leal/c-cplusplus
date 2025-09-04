@@ -6,8 +6,9 @@ int main(){
 
   std::cout << std::setprecision(5) << std::fixed; //Definindo a precisão de numero decimais como 5 casas
 
-  float a=0, b=0, c=0;
-  float delta=0, xPositivo=0.00, xNegativo=0;
+  //TIVE QUE TROCAR TUDO PARA DOUBLE,PQ NO FLOAT DAVA 0,0001 DE ERRO
+  double a=0, b=0, c=0;
+  double delta=0, xPositivo=0.00, xNegativo=0;
 
   std::cin >> a >> b >> c;
 
