@@ -1,118 +1,58 @@
 #include <stdio.h>
-void remover_espacos(char valores_func[]){
-  int i, j=0;
-
-  //percorre a string original
-  for (i=0 ; valores_func[i] != '\0' ; i++){ // para o incrementador igual a zero, sendo valores diferente de NADA(/0) , incremente e faÁa
-
-    //se o caracatere n„o for um espaÁo, copiamos para a nova posiÁ„o
-    //se o valor[nesta posicao] for diferente de espaÁo
-      //valores[na posiÁ„o j] recebe valores[da posicao i]
-    if(valores_func[i] != ' '){
-      valores_func[j++] = valores_func[i];
-    }
-
-  }
-  //finaliza string sem espaÁos
-  valores_func[j] = '\0';
-
-}
-
-int main(){
-
-  char valores[12];
-
-  printf("Digite os valores, abaixo: \n");
-  fgets(valores, 12, stdin);
-  fflush(stdin);
-
-  remover_espacos(valores);
-
-  printf("\n");
-
-  puts(valores);
-
-  return 0;
-}
-
-
-
-/*  //CONVERTENDO CHAR PARA DOUBLE/FLOAT
-  char teste = '7';
-  int convertido = (int)teste - 48;
-  int soma=0;
-
-  soma = convertido+1;
-
-  printf("%d \n", soma);
-  printf("%d", convertido);*/
-
-/*
-em for(i=0; i<(tam-1) ; i++), se retira 1 de tamanho, porque o algoritmo entende
-de 0 a 11 (onde tem 12 espaÁos) e n„o de 1 a 12.
-*/
-
-
-
-#include <stdio.h>
 #include <stdlib.h>
+#include <string.h>
 
-//DEFININDO O TAMANHO PADR√O 12 CARACTERES
+//DEFININDO O TAMANHO PADR√ÉO 12 CARACTERES
 #define tam 12
 
-void remover_espacos(char* valores_func[]){
-  int i, j=0;
+//FUNCAO QUE REMOVE ESPA√áOS USANDO strtok
+void remover_espacos(char expressao_func[]){
+  char *expressao; //VARIAVEL ponteiro de expressao_func
+  char valores[tam]; // VARIAVEL PARA MANIPULAR, SE FOR NECESSARIO COM strcmp
 
-  //percorre a string original
-  for (i=0 ; valores_func[i] != '\0' ; i++){ // para o incrementador igual a zero, sendo valores diferente de NADA(/0) , incremente e faÁa
+  expressao = strtok(expressao_func, " "); //REMOVE ESPA√áO
+  while(expressao != NULL){ //ENQUANTO FOR DIFERENTE DE NULL REPETE
+    printf("%s \n", expressao);
 
-    //se o caracatere n„o for um espaÁo, copiamos para a nova posiÁ„o
-    //se o valor[nesta posicao] for diferente de espaÁo
-      //valores[na posiÁ„o j] recebe valores[da posicao i]
-    if(valores_func[i] != ' '){
-      valores_func[j++] = valores_func[i];
-    }
-
+    expressao = strtok(NULL, " "); //REMOVE ESPA√áO
   }
-  //finaliza string sem espaÁos
-  valores_func[j] = '\0';
 
 }
 
 
-bool simbolos(char simbolos_func[]){ //FUNCAO QUE IDENTIFICA SÕMBOLOS MATEM¡TICOS
+/*bool simbolos(char simbolos_func[]){ //FUNCAO QUE IDENTIFICA S√çMBOLOS MATEM√ÅTICOS
   int i=0;
 
   for(i=0; i<(tam-1) ; i++){
     switch (simbolos_func[i]){
       case '+':
-       // printf("SOMA \n");
+        printf("SOMA \n");
         return true;
       break;
 
       case '-':
-     //   printf("SUBTRACAO \n");
+        printf("SUBTRACAO \n");
         return true;
       break;
 
        case '*':
-   //     printf("MULTIPLICAO \n");
+        printf("MULTIPLICAO \n");
         return true;
       break;
 
        case '/':
-    //    printf("DIVISAO \n");
+        printf("DIVISAO \n");
         return true;
       break;
     }
   }
-}//FIM FUNCTION SIMBOLO
+}//FIM FUNCTION SIMBOLO*/
 
 
-void eNumero(char* numeros_func, bool simbolo_func_enumero){
- //TENHO QUE DESENVOLVER UMA FUNCAO QUE TRANSFORMA CARACTERER EM N⁄MERO
+/*void eNumero(char* numeros_func, bool simbolo_func_enumero){
+ //TENHO QUE DESENVOLVER UMA FUNCAO QUE TRANSFORMA CARACTERER EM N√öMERO
   // EX: |1|1|+|0| -> |1|1| -> 11
-  // SE DIGITADO 2 OU MAIS N⁄MEROS ANTES DE UM SÕMBOLO … UM N⁄MERO COM MAIS CASAS
+  // SE DIGITADO 2 OU MAIS N√öMEROS ANTES DE UM S√çMBOLO √â UM N√öMERO COM MAIS CASAS
   //
 
   int i;
@@ -133,19 +73,18 @@ void eNumero(char* numeros_func, bool simbolo_func_enumero){
 
 
 
-} //FIM FUNCTION CARACTERE PARA NUMERO
+} //FIM FUNCTION CARACTERE PARA NUMERO*/
 
 
 int main(){
 
-  char valores[tam];
+  char expressao[tam];
 
   printf("Digite os valores, abaixo: \n");
-  fgets(valores, tam, stdin);
+  fgets(expressao, tam, stdin);
   fflush(stdin);
 
-  remover_espacos(valores);
-
+  remover_espacos(expressao);
 
 
   printf("\n");
@@ -169,23 +108,23 @@ int main(){
 
 
   /*
-  FASE 1 -> Teste cÛdigo em Terminal
-    Etapa 1 -> Transformar caractere em n˙mero;     (AINDA ESTOU NESSA ETAPA, MAS SEPARANDO N⁄MEROS DE DOS SÕMBOLOS)
-    FEITO - Etapa 2 -> Retirar espaÁo de vetor de caractere; '1 + 1' -> '1+1'
-    Etapa 3 -> Transformar sÌmbolo matem·tica em c·lculo.
+  FASE 1 -> Teste c√≥digo em Terminal
+    Etapa 1 -> Transformar caractere em n√∫mero;     (AINDA ESTOU NESSA ETAPA, MAS SEPARANDO N√öMEROS DE DOS S√çMBOLOS)
+    FEITO - Etapa 2 -> Retirar espa√ßo de vetor de caractere; '1 + 1' -> '1+1'
+    Etapa 3 -> Transformar s√≠mbolo matem√°tica em c√°lculo.
     Etapa 4 -> Calcular com dois algarismos '7*1';
-    Etapa 5 -> Calcular com trÍs ou mais algarismos '7+1+1';
-    Etapa 6 -> Revis„o do cÛdigo;
+    Etapa 5 -> Calcular com tr√™s ou mais algarismos '7+1+1';
+    Etapa 6 -> Revis√£o do c√≥digo;
 
-  Fase 2 -> Transformar em tela gr·fica
-    Etapa 1 -> B·sico sobre C#
-    Etapa 2 -> Aprender funcionamento de botıes;
+  Fase 2 -> Transformar em tela gr√°fica
+    Etapa 1 -> B√°sico sobre C#
+    Etapa 2 -> Aprender funcionamento de bot√µes;
     Etapa 3 -> Aprender funcionamento de caixa de textos;
-    Etapa 4 -> Criar botıes de n˙mero;
-    Etapa 5 -> Criar botıes de apagar;
-    Etapa 6 -> Criar botıes dos c·lculos;
-    Etapa 7 -> Criar bot„o de Enter/Ok/Realizar c·lculo;
-    Etapa 8 -> Realizar a mesma codificaÁ„o ou parecida da FASE 1;
-    Etapa 9 -> Revis„o
+    Etapa 4 -> Criar bot√µes de n√∫mero;
+    Etapa 5 -> Criar bot√µes de apagar;
+    Etapa 6 -> Criar bot√µes dos c√°lculos;
+    Etapa 7 -> Criar bot√£o de Enter/Ok/Realizar c√°lculo;
+    Etapa 8 -> Realizar a mesma codifica√ß√£o ou parecida da FASE 1;
+    Etapa 9 -> Revis√£o
 
   */
