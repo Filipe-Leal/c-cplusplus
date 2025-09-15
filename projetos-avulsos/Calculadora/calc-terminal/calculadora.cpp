@@ -118,12 +118,13 @@ int main(){
 
   /*
   FASE 1 -> Teste código em Terminal
-    Etapa 1 -> Transformar caractere em número;     (AINDA ESTOU NESSA ETAPA, MAS SEPARANDO NÚMEROS DE DOS SÍMBOLOS)
-    FEITO - Etapa 2 -> Retirar espaço de vetor de caractere; '1 + 1' -> '1+1'
+    Etapa 1 -> Retirar espaço de vetor de caractere; '1 + 1' -> '1+1'
+    Etapa 2 -> Transformar caractere em número;
     Etapa 3 -> Transformar símbolo matemática em cálculo.
     Etapa 4 -> Calcular com dois algarismos '7*1';
     Etapa 5 -> Calcular com três ou mais algarismos '7+1+1';
     Etapa 6 -> Revisão do código;
+
 
   Fase 2 -> Transformar em tela gráfica
     Etapa 1 -> Básico sobre C#
