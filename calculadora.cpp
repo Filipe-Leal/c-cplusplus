@@ -20,71 +20,22 @@ void remover_espacos(char expressao_func[]){
 }
 
 
-/*bool simbolos(char simbolos_func[]){ //FUNCAO QUE IDENTIFICA SÍMBOLOS MATEMÁTICOS
-  int i=0;
-
-  for(i=0; i<(tam-1) ; i++){
-    switch (simbolos_func[i]){
-      case '+':
-        printf("SOMA \n");
-        return true;
-      break;
-
-      case '-':
-        printf("SUBTRACAO \n");
-        return true;
-      break;
-
-       case '*':
-        printf("MULTIPLICAO \n");
-        return true;
-      break;
-
-       case '/':
-        printf("DIVISAO \n");
-        return true;
-      break;
-    }
-  }
-}//FIM FUNCTION SIMBOLO*/
-
-
-/*void eNumero(char* numeros_func, bool simbolo_func_enumero){
- //TENHO QUE DESENVOLVER UMA FUNCAO QUE TRANSFORMA CARACTERER EM NÚMERO
-  // EX: |1|1|+|0| -> |1|1| -> 11
-  // SE DIGITADO 2 OU MAIS NÚMEROS ANTES DE UM SÍMBOLO É UM NÚMERO COM MAIS CASAS
-  //
-
-  int i;
-  for(i=0 ; i<(tam-1);i++){
-    if(simbolo_func_enumero == 1){
-      i++;
-
-      printf("TESTE");
-    }
-
-    int convertido = atoi(numeros_func);
-    int soma=0;
-    soma = convertido+1;
-
-  }
-
-
-
-
-
-} //FIM FUNCTION CARACTERE PARA NUMERO*/
-
-
 int main(){
 
   char expressao[tam];
+  int i;
+
 
   printf("Digite os valores, abaixo: \n");
   fgets(expressao, tam, stdin);
   fflush(stdin);
 
   remover_espacos(expressao);
+
+  /*SEPARA OS NUMEROS DO SIMBOLOS?
+    CRIO UM ARRAY DE SIMBOLOS E OUTRO DE NUMERO
+    TRANSFORMO OS CARACTERES EM NUMEROS?
+  */
 
 
   printf("\n");
