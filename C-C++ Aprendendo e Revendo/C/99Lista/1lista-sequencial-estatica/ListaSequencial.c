@@ -45,3 +45,18 @@ int lista_vazia(Lista* li){
     return -1;
   return(li->qtd == 0);
 }
+
+//INSERCAO NA LISTA FINAL
+int insere_lista_final(Lista* li, struct aluno al){
+  if(li == NULL){
+    return 0;
+
+    if(lista_cheia(li)){
+      return 0;
+
+    li->dados[li->qtd] = al;
+    li->qtd++;
+    return 1;
+    }
+  }
+}
